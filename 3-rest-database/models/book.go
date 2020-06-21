@@ -19,10 +19,10 @@ type Book struct {
 // Validate verifies that the required fields are present
 func (b *Book) Validate() error {
 	if b.Title == "" {
-		return errors.New("missing required title")
+		return errors.New("book: missing required title")
 	}
 	if b.Author == "" {
-		return errors.New("missing required author")
+		return errors.New("book: missing required author")
 	}
 	return nil
 }
